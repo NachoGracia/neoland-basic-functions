@@ -64,7 +64,15 @@ console.log(suma);
 
  
   
+//! iteration 4
 
+/* Calcular un promedio es una tarea extremadamente común. Puedes usar este array para probar tu función:*/
+
+const numeros = [12, 21, 38, 5, 45, 37, 6];
+
+const promedio = numeros.reduce((accumulator, currentValue) => accumulator + currentValue) /numeros.length
+
+console.log(promedio);
 
 
 
