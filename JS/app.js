@@ -31,8 +31,7 @@ const avengers = ['Hulk', 'Thor', 'IronMan', 'Captain A.', 'Spiderman', 'Captain
 
 const palabraMasLarga = (array) => {
 
-
-  let maxcadena = "";
+let maxcadena = "";
 
 for (let i = 0 ; i < array.length; i++ ) {
   if (array[i].length > maxcadena.length) {
@@ -50,11 +49,23 @@ console.log(palabraLarga)
 //console.log(palabraMasLarga(avengers))
 
 
-
-
-
-
 //! iteracion 3
+
+/*Calcular una suma puede ser tan simple como iterar sobre un array y sumar cada uno de los elementos.
+Implemente la función denominada sumNumbers que toma un array de números como argumento y devuelve la suma de todos los números de la matriz. 
+Puedes usar este array para probar tu función:
+*/
+const numbers = [1, 2, 3, 5, 45, 37, 58];
+
+
+const suma = numbers.reduce((acc, numero) => acc + numero);
+
+console.log(suma);
+
+ 
+  
+
+
 
 
 
