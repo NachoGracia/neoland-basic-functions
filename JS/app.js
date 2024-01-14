@@ -1,52 +1,81 @@
 //! iteración 1
 //Completa la función que tomando dos números como argumento devuelva el más alto.
 
-/*function sum(numberOne , numberTwo) {
-   
-  }
-*/
+//?  con arrow y ternario
   
-  const comp = (numberOne, numberTwo) => { 
-    if (numberOne > numberTwo){
-        //console.log(numberOne)
-        return numberOne;
-    } 
-        else {
-            //console.log(numberTwo)
-            return numberTwo;
-        }
+const comparar = (numberOne, numberTwo) => {
+
+return (numberOne > numberTwo) ? numberOne : numberTwo; 
+
 }
 
-let result = comp(1, 5);
-console.log(result)
+let resultado = comparar(8,3) //creo una let nueva HAY RETURN, para invocar a la función con los parámetros 8 y 3
+console.log("🚀 ~ resultado:", resultado)
 
-//! iteracion 2 ---------------------------------------------NO TERMINADA
+//? con if y else:
+
+  const comp = (numberOne, numberTwo) => { 
+
+    if (numberOne > numberTwo) {
+      return numberOne;
+    } else {
+      return numberTwo;
+    }
+}
+
+let result = comp(1, 5); //creamos let pq hay RETURN.
+console.log("🚀 ~ result:", result)
+
+//! iteracion 2 --------------
 
 /*Completa la función que tomando un array de strings como argumento devuelva el más largo,
 en caso de que dos strings tenga la misma longitud deberá devolver el primero.
 Puedes usar este array para probar tu función:
 */
 
-const avengers = ['Hulk', 'Thor', 'IronMan', 'Captain A.', 'Spiderman', 'Captain M.'];
+//? funcion arrow, recorrer array con for y condicional con ternario: 
+//! asi no lo consigo
 
-const palabraMasLarga = (array) => {
+/*const avengers = ['Hulk', 'Thor', 'IronMan', 'Captain A.', 'Spiderman', 'Captain M.'];
+
+const stringParaComparar =""; // como comparamos string, creamos una vacia con valor 0.
+
+const nombreMasLargo = (array) => {
+
+  for (let i= 0; i<avengers.length; i++){
+
+    let resultadoMasLargo = "";
+    
+  (avengers[i].length > stringParaComparar.length) 
+  ? (avengers[i] = stringParaComparar) 
+  : stringParaComparar; 
+    }
+    return resultadoMasLargo;
+}
+  let resultadoMasLargo = nombreMasLargo(avengers);
+  console.log("🚀 ~ resultadoMasLargo:", resultadoMasLargo)*/
+  
+//! asi si
+//?function arrow, recorrer con for of y condicionar if else
+
+const avengers = ['Hulk', 'Thor', 'IronMan', 'Captain A.', 'Spiderman', 'Captain M.'];
 
 let maxcadena = "";
 
+const palabraMasLarga = (array) => {
+
+  
 for (let i = 0 ; i < array.length; i++ ) {
   if (array[i].length > maxcadena.length) {
     maxcadena = array[i]
-  }
+  } 
  
 } 
 return maxcadena;
 }
 
 const palabraLarga = palabraMasLarga(avengers);
-
-console.log(palabraLarga)
-
-//console.log(palabraMasLarga(avengers))
+console.log("🚀 ~ palabraLarga:", palabraLarga)
 
 
 //! iteracion 3
@@ -59,11 +88,9 @@ const numbers = [1, 2, 3, 5, 45, 37, 58];
 
 
 const suma = numbers.reduce((acc, numero) => acc + numero);
+console.log("🚀 ~ suma:", suma)
 
-console.log(suma);
 
- 
-  
 //! iteration 4
 
 /* Calcular un promedio es una tarea extremadamente común. Puedes usar este array para probar tu función:*/
@@ -71,11 +98,72 @@ console.log(suma);
 const numeros = [12, 21, 38, 5, 45, 37, 6];
 
 const promedio = numeros.reduce((accumulator, currentValue) => accumulator + currentValue) /numeros.length
-
-console.log(promedio);
-
+console.log("🚀 ~ promedio:", promedio)
 
 
 
+
+//! iteracion 5---------------------INCOMPLETO--------------------------------
+
+/*Crea una función que reciba por parámetro un array y cuando es un valor number lo sume y de lo contrario 
+cuente la longitud del string y lo sume. Puedes usar este array para probar tu función:*/
+
+const mixedElements = [6, 1, 'Rayo', 1, 'vallecano', '10', 'upgrade', 8, 'hub'];
+
+
+
+const sumaVallongString = (array) => {
+
+  let sumaNumeros = 0
+
+for (let i=0; i<array.length; i++) {
+
+if (typeof Element === "number") {
+
+  return item.reduce((accumulator, currentValue) => accumulator + currentValue) = sumaNumeros 
+}
+
+}
+
+}
+
+const numerosSumados = sumaVallongString(mixedElements);
+
+console.log(numerosSumados);
+
+//! iteracion 6---------------------NO ME FUNCIONA
+
+/*Crea una función que reciba por parámetro un array y compruebe si existen elementos duplicados, 
+en caso que existan los elimina para retornar un array sin los elementos duplicados.
+ Puedes usar este array para probar tu función:*/
+
+ const duplicates = [
+  'sushi',
+  'pizza',
+  'burger',
+  'potatoe',
+  'pasta',
+  'ice-cream',
+  'pizza',
+  'chicken',
+  'onion rings',
+  'pasta',
+  'soda'
+];
+
+const comidaSinDuplicar = (array) =>{
+let sinRepetidos = []
+for (let comida of array){
+  //console.log("🚀 ~ comida:", comida) comprobar recorrido array
+ (comida === comida) 
+  ? delete comida
+  : sinRepetidos;
+  
+}
+return sinRepetidos
+}
+
+const comidaFinal = comidaSinDuplicar(duplicates);
+console.log("🚀 ~ comidaFinal:", comidaFinal)
 
 
