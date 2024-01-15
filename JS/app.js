@@ -103,33 +103,47 @@ console.log("🚀 ~ promedio:", promedio)
 
 
 
-//! iteracion 5---------------------INCOMPLETO--------------------------------
+//! iteracion 5---------------------------------------------------
 
 /*Crea una función que reciba por parámetro un array y cuando es un valor number lo sume y de lo contrario 
 cuente la longitud del string y lo sume. Puedes usar este array para probar tu función:*/
 
 const mixedElements = [6, 1, 'Rayo', 1, 'vallecano', '10', 'upgrade', 8, 'hub'];
 
+const sumaNumber = (array)=> {
 
+  let numerosSumados = 0;
+  let longString = 0;
 
-const sumaVallongString = (array) => {
+for (let element of array){
 
-  let sumaNumeros = 0
-
-for (let i=0; i<array.length; i++) {
-
-if (typeof Element === "number") {
-
-  return item.reduce((accumulator, currentValue) => accumulator + currentValue) = sumaNumeros 
+ if (typeof element === 'number') {
+   numerosSumados += element;
+    }
+if (typeof element === 'string') {
+  longString += element.length;
 }
 
 }
+  return `La suma de los números es ${numerosSumados}, y la suma de la longitud de los string es ${longString}`;
 
 }
 
-const numerosSumados = sumaVallongString(mixedElements);
+sumaNumber(mixedElements);
+console.log("🚀 ~ sumaNumber:", sumaNumber(mixedElements))
 
-console.log(numerosSumados);
+
+
+
+
+
+
+
+
+
+
+
+
 
 //! iteracion 6---------------------NO ME FUNCIONA
 
@@ -137,7 +151,7 @@ console.log(numerosSumados);
 en caso que existan los elimina para retornar un array sin los elementos duplicados.
  Puedes usar este array para probar tu función:*/
 
- const duplicates = [
+ /*const duplicates = [
   'sushi',
   'pizza',
   'burger',
@@ -166,4 +180,4 @@ return sinRepetidos
 const comidaFinal = comidaSinDuplicar(duplicates);
 console.log("🚀 ~ comidaFinal:", comidaFinal)
 
-
+*/
