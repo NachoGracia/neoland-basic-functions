@@ -88,7 +88,8 @@ const numbers = [1, 2, 3, 5, 45, 37, 58];
 
 
 const suma = numbers.reduce((acc, numero) => acc + numero);
-console.log("🚀 ~ suma:", suma)
+
+console.log(`La suma de los números es ${suma}`);
 
 
 //! iteration 4
@@ -134,24 +135,13 @@ console.log("🚀 ~ sumaNumber:", sumaNumber(mixedElements))
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-//! iteracion 6---------------------NO ME FUNCIONA
+//! iteracion 6---------------------ME FALTA DESCRIBIR LA CONDICIONAL
 
 /*Crea una función que reciba por parámetro un array y compruebe si existen elementos duplicados, 
 en caso que existan los elimina para retornar un array sin los elementos duplicados.
  Puedes usar este array para probar tu función:*/
 
- /*const duplicates = [
+ const duplicates = [
   'sushi',
   'pizza',
   'burger',
@@ -166,18 +156,20 @@ en caso que existan los elimina para retornar un array sin los elementos duplica
 ];
 
 const comidaSinDuplicar = (array) =>{
-let sinRepetidos = []
+
+let sinRepetidos = [];
+
 for (let comida of array){
-  //console.log("🚀 ~ comida:", comida) comprobar recorrido array
- (comida === comida) 
-  ? delete comida
-  : sinRepetidos;
-  
-}
-return sinRepetidos
+
+  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+  }
+  return `Este es el nuevo menu ${sinRepetidos}`
 }
 
-const comidaFinal = comidaSinDuplicar(duplicates);
-console.log("🚀 ~ comidaFinal:", comidaFinal)
+comidaSinDuplicar(duplicates);
+console.log("🚀 ~ comidaSinDuplicar(duplicates):", comidaSinDuplicar(duplicates))
 
-*/
+
+
+
