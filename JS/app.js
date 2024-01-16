@@ -33,29 +33,6 @@ en caso de que dos strings tenga la misma longitud deberá devolver el primero.
 Puedes usar este array para probar tu función:
 */
 
-//? funcion arrow, recorrer array con for y condicional con ternario: 
-//! asi no lo consigo
-
-/*const avengers = ['Hulk', 'Thor', 'IronMan', 'Captain A.', 'Spiderman', 'Captain M.'];
-
-const stringParaComparar =""; // como comparamos string, creamos una vacia con valor 0.
-
-const nombreMasLargo = (array) => {
-
-  for (let i= 0; i<avengers.length; i++){
-
-    let resultadoMasLargo = "";
-    
-  (avengers[i].length > stringParaComparar.length) 
-  ? (avengers[i] = stringParaComparar) 
-  : stringParaComparar; 
-    }
-    return resultadoMasLargo;
-}
-  let resultadoMasLargo = nombreMasLargo(avengers);
-  console.log("🚀 ~ resultadoMasLargo:", resultadoMasLargo)*/
-  
-//! asi si
 //?function arrow, recorrer con for of y condicionar if else
 
 const avengers = ['Hulk', 'Thor', 'IronMan', 'Captain A.', 'Spiderman', 'Captain M.'];
@@ -135,7 +112,7 @@ console.log("🚀 ~ sumaNumber:", sumaNumber(mixedElements))
 
 
 
-//! iteracion 6---------------------ME FALTA DESCRIBIR LA CONDICIONAL
+//! iteracion 6---------------------
 
 /*Crea una función que reciba por parámetro un array y compruebe si existen elementos duplicados, 
 en caso que existan los elimina para retornar un array sin los elementos duplicados.
@@ -159,16 +136,23 @@ const comidaSinDuplicar = (array) =>{
 
 let sinRepetidos = [];
 
-for (let comida of array){
 
-  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+for (let i=0; i<array.length; i++){
 
-  }
-  return `Este es el nuevo menu ${sinRepetidos}`
+  if (!sinRepetidos.includes(array[i])) {
+    sinRepetidos.push(array[i]);
+
+  } 
 }
-
+return `Este es el nuevo menu: ${sinRepetidos}`
+  }
+  
 comidaSinDuplicar(duplicates);
 console.log("🚀 ~ comidaSinDuplicar(duplicates):", comidaSinDuplicar(duplicates))
+
+
+
+
 
 
 
